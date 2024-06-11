@@ -52,7 +52,7 @@ $personalInfos = [
       'tel'  => '09055556666'
   ],
 ];
-foreach ($personalInfos as $key => $personalInfos){
+foreach ($personalInfos as $key => $personalInfos) {
   echo $key + 1 . '番目の' . $personalInfos['name'] . 'のメールアドレスは'
   . $personalInfos['mail'] . 'で、電話番号は' . $personalInfos['tel'] . 'です。' . "\r\n";
 }
@@ -63,23 +63,23 @@ $personalInfos = [
     [
         'name' => 'Aさん',
         'mail' => 'aaa@mail.com',
-        'tel'  => '09011112222'
+        'tel' => '09011112222'
     ],
     [
         'name' => 'Bさん',
         'mail' => 'bbb@mail.com',
-        'tel'  => '08033334444'
+        'tel' => '08033334444'
     ],
     [
         'name' => 'Cさん',
         'mail' => 'ccc@mail.com',
-        'tel'  => '09055556666'
+        'tel' => '09055556666'
     ],
 ];
 
 $age = [25, 30, 18];
 foreach ($age as $key => $value){
-    $personalInfos[$key]['age'] = $age[$key];
+    $personalInfos[$key]['age'] = $value;
 }
 var_dump($personalInfos);
 
@@ -93,8 +93,6 @@ class Student
     {
         $this->studentId = $id;
         $this->studentName = $name;
-        
-        echo '学籍番号' . $id . '番の生徒は'. $name . 'です。';
     }
 
     public function attend()
@@ -103,7 +101,8 @@ class Student
     }
 }
 
-$test = new student('13', '亀山');
+$test = new Student('12', '亀山');
+echo '学籍番号' . $test->studentId . '番の生徒は' . $test->studentName . 'です。';
 
 // Q4 オブジェクト-2
 class Student
