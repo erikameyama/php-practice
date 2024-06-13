@@ -1,0 +1,24 @@
+Q1データの受け取り・受け渡しの処理を記述するのはどのファイルでしたか？
+A.② connection.php
+
+Q2 DB操作処理を記述するのはどのファイルでしたか？
+A.① functions.php
+
+Q3
+アプリケーションの設定を記述するのはどのファイルでしたか？
+A.③ config.php
+
+Q4以下のフォームの送信ボタンを押下した際にstore.phpの$_POSTにどんな値が格納されますか？
+
+<form action="store.php" method="post">
+  <input type="text" name="id" value="123">
+  <textarea　name="content">焼肉</textarea>
+  <button type="submit">送信</button>
+</form>
+
+A.array(1) { ["id"]}=> string("123")}
+
+Q5 header('location: ./index.html')は何をしているか説明してください。
+A.functions.php 内にある createData関数 にPOSTデータを渡すことが可能になります。
+出力コマンドの前に書く必要があります。
+生の HTTP ヘッダを送信する→HTTPリクエストおよびHTTPレスポンスを構成する要素の1つです。 HTTPヘッダには、クライアントとサーバが通信する際の詳細な説明や制御情報などが格納されています。

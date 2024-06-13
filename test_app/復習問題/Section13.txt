@@ -1,0 +1,15 @@
+Q1 connection.phpで定義した変数$dbhの中には何を格納したでしょうか？
+A.④ PDOインスタンス
+
+Q2 <?= $var; ?>は以下の選択肢のうち、どの処理の省略形ですか？
+A.② <?php echo $var; ?>
+
+Q3 一覧ページにTODOを表示するために今回行ったこととして間違っている選択肢はどれですか？
+A.
+④ echoはPHPとHTMLが混在しているときは使えないので短縮表現を使った。
+
+Q5 getTodoList()の返り値について説明してください。
+A.
+DBの内容。具体的には、まずgetTodoList()で呼び出されるgetAllRecords()の返り値を確認します。
+connectPdo();でDBに接続し$sqlでDBにたいするSELECT分を記述し、返り値として$sqlの実行結果をfetchAll()によりidとcontentというキーに基づいた連想配列の形に変えたものを吐き出します。
+蛇足になりますが、それをindex.phpがrequire_once()により返り値を使うことができる為、web状でDBの内容が確認できます。
